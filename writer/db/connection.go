@@ -15,7 +15,7 @@ var (
 )
 
 const (
-	CONNECTIONSTRING = "mongodb://localhost:27017"
+	CONNECTIONSTRING = "mongodb://db:27017"
 	DB               = "sellerApp"
 	ISSUES           = "products"
 )

@@ -77,7 +77,7 @@ func Fetch(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("err")
 	}
 
-	req, err := http.NewRequest(http.MethodPost, "http://localhost:9000/product", bytes.NewBuffer(d))
+	req, err := http.NewRequest(http.MethodPost, "http://writer-api:9000/product", bytes.NewBuffer(d))
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		w.Write([]byte("error while sending request"))
