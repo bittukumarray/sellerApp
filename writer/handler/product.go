@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"time"
 	"writer/db"
 	"writer/model"
 )
@@ -32,6 +33,8 @@ func Create(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("database connection error"))
 		return
 	}
+
+	res.CreatedAt = time.Now().Format("2006-01-02 15:04:05")
 
 	collection := client.Database(db.DB).Collection(db.ISSUES)
 

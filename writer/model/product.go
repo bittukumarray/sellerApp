@@ -13,6 +13,7 @@ type Product struct {
 }
 
 type ResponseModel struct {
-	URL     string  `json:"url"`
-	Product Product `json:"product"`
+	URL       string  `json:"url"`
+	Product   Product `json:"product"`
+	CreatedAt string  `json:"createdAt"`
 }
